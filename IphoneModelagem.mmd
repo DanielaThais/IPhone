@@ -1,0 +1,34 @@
+classDiagram
+    class IPhone {
+        +String modelo
+        +String versaoIOS
+        +fazerBackup()
+        +instalarApp()
+    }
+
+    class AparelhoTelefônico {
+        <<interface>>
+        +ligar()
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica()
+    }  
+    
+    class NavegadorInternet {
+        <<interface>>
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+    
+    IPhone ..|> AparelhoTelefônico
+    IPhone ..|> ReprodutorMusical
+    IPhone ..|> NavegadorInternet
+
+    
+    
